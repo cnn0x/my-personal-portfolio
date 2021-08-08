@@ -558,10 +558,14 @@ body {
   }
 
   .nav-bar {
-    justify-content: flex-start;
-    padding: 0;
-    left: 40px;
-    top: 20px;
+    justify-content: space-between;
+    padding: 10px 20px;
+    left: 0;
+    top: 0;
+    background-color: #17181a;
+  }
+  .nav-bar a {
+    margin: 0;
   }
 
   .home-container {
