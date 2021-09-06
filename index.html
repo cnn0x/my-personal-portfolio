@@ -8,319 +8,329 @@
     <title>Fatih Can Isik - Personal Website</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link
       href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="container">
-      <div class="nav-bar">
-        <a href="#home"><i class="fad fa-meteor"></i></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js"></script>
+    <div class="cursor"></div>
+    <div class="nav-bar">
+      <a
+        href="#home"
+        style="display: flex; align-items: center; justify-content: center"
+        ><img src="./meteor-solid.svg" alt="logo"
+      /></a>
+      <span>
         <a href="#projects">Projects</a>
         <a href="#about">About Me</a>
-      </div>
-      <div id="home" class="home-container">
-        <div class="header-container">
-          <div class="greet">Hello!</div>
-          <div class="slogan">
-            I’m <span>Fatih,</span><br />
-            Web Developer & Designer
-          </div>
-          <div class="paragraph">
-            I build high quality websites that meets with your business goals.
-          </div>
-          <div style="margin-top: 30px">
-            <a class="more-abt" href="#about">About Me</a>
-          </div>
+      </span>
+    </div>
+    <div id="home" class="home-container">
+      <div class="header-container">
+        <div class="greet">Hello!</div>
+        <div class="slogan">
+          I’m <span>Fatih,</span><br />
+          Web Developer & Designer
         </div>
-        <div class="box">
-          <i class="fad fa-meteor"></i>
-        </div>
-        <div class="scroll-int">
-          <div class="scroll-icon"><div class="wheel"></div></div>
-          <div class="scroll-text">Scroll</div>
+        <div class="paragraph">
+          I build high quality websites that meets with your business goals.
         </div>
       </div>
-      <div id="projects" class="projects-container">
-        <div class="section-header">
-          <span>Projects</span>
-          <span>Some Things I’ve Built</span>
-        </div>
-        <div class="project-boxes">
-          <div class="project-box">
-            <div class="project-img">
-              <img src="./web-images/ecommerce1.png" alt="" />
-            </div>
-            <div class="project-details">
-              <div>
-                <div class="icons">
-                  <i class="fal fa-folder"></i>
-                  <a
-                    target="_blank"
-                    href="https://github.com/fatihcnn/E-commerce-Website---Full-Project"
-                    ><i class="fal fa-external-link"></i
-                  ></a>
-                </div>
-                <h2>MERN Stack E-commerce</h2>
-                <p>
-                  A full stack e-commerce website that I made with React and I
-                  used Node.js for create back-end.
-                </p>
-              </div>
-              <div class="technologies">
-                <span>MongoDB</span>
-                <span>Express</span>
-                <span>React</span>
-                <span>Node.js</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-box">
-            <div class="project-img">
-              <img src="./web-images/covidtracker.png" alt="" />
-            </div>
-            <div class="project-details">
-              <div>
-                <div class="icons">
-                  <i class="fal fa-folder"></i>
-                  <a
-                    target="_blank"
-                    href="https://github.com/fatihcnn/covidtracker"
-                    ><i class="fal fa-external-link"></i
-                  ></a>
-                </div>
-                <h2>Covid-19 Tracker</h2>
-                <p>
-                  Covid-19 Tracker with interactive map, daily data and more.
-                </p>
-              </div>
-              <div class="technologies">
-                <span>API</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-box">
-            <div class="project-img">
-              <img src="./web-images/portfolio1.png" alt="" />
-            </div>
-            <div class="project-details">
-              <div>
-                <div class="icons">
-                  <i class="fal fa-folder"></i>
-                  <a
-                    target="_blank"
-                    href="https://github.com/fatihcnn/portfolio"
-                    ><i class="fal fa-external-link"></i
-                  ></a>
-                </div>
-                <h2>Personal Portfolio</h2>
-                <p>
-                  Personal portfolio website that I made with HTML, CSS,
-                  JavaScript.
-                </p>
-              </div>
-              <div class="technologies">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-box">
-            <div class="project-img">
-              <img src="./web-images/personal-portfolio.png" alt="" />
-            </div>
-            <div class="project-details">
-              <div>
-                <div class="icons">
-                  <i class="fal fa-folder"></i>
-                  <a
-                    target="_blank"
-                    href="https://github.com/fatihcnn/my-personal-portfolio"
-                    ><i class="fal fa-external-link"></i
-                  ></a>
-                </div>
-                <h2>My Personal Portfolio</h2>
-                <p>I created this project to use as my personal portfolio.</p>
-              </div>
-              <div class="technologies">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-box">
-            <div class="project-img">
-              <img src="./web-images/mobiledesign1.png" alt="" />
-            </div>
-            <div class="project-details">
-              <div>
-                <div class="icons">
-                  <i class="fal fa-folder"></i>
-                  <a target="_blank" href="https://github.com/fatihcnn/News-App"
-                    ><i class="fal fa-external-link"></i
-                  ></a>
-                </div>
-                <h2>Mobile Design</h2>
-                <p>
-                  Mobile design for news app. Made with HTML, CSS, JavaScript.
-                </p>
-              </div>
-              <div class="technologies">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-box">
-            <div class="project-img">
-              <img src="./web-images/starshiptracker1.png" alt="" />
-            </div>
-            <div class="project-details">
-              <div>
-                <div class="icons">
-                  <i class="fal fa-folder"></i>
-                  <a
-                    target="_blank"
-                    href="https://github.com/fatihcnn/Starship-Tracker"
-                    ><i class="fal fa-external-link"></i
-                  ></a>
-                </div>
-                <h2>SpaceX Starship Flight Tracker</h2>
-                <p>
-                  Starship tracker that shows you previos and upcoming launchs.
-                </p>
-              </div>
-              <div class="technologies">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="box">
+        <img src="#" alt="" />
+        <img src="./me.jpg" alt="" />
       </div>
-      <div id="about" class="about-container">
-        <div class="section-header">
-          <span>Who am I?</span>
+      <div class="scroll-int">
+        <div class="scroll-icon"><div class="wheel"></div></div>
+        <div class="scroll-text">
+          <i class="far fa-chevron-double-down"></i>
         </div>
-        <div class="information">
-          <img src="./me.jpg" alt="" />
-          <div class="info">
-            <div class="personal-info">
-              <h1>I'm Fatih</h1>
-              <p>
-                Hello! My name is Fatih and I create websites. My interest in
-                web development started when I decided to make website for my
-                youtube channel and then I realized I have passion for web
-                development.
-              </p>
-              <br />
-              <p>
-                Here are a few technologies I've been working with recently:
-              </p>
-              <div class="recent-tech">
-                <span>JavaScript (ES6+)</span><span>React</span
-                ><span>Node.js</span><span>MongoDB</span>
-              </div>
-            </div>
-            <div class="social-links">
-              <a href="mailto: fatihcandev@gmail.com" target="_blank"
-                ><i class="fal fa-envelope"></i> Email :
-                fatihcandev@gmail.com</a
-              ><br />
-              <a href="https://github.com/fatihcnn" target="_blank"
-                ><i class="fab fa-github"></i> Github</a
-              >
-              <a href="https://twitter.com/fatihcisk" target="_blank"
-                ><i class="fab fa-twitter"></i> Twitter</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="about-container-bottom">
-          <div class="timeline-container">
-            <h1>Timeline</h1>
-            <div class="timeline-parts">
-              <div class="timeline-part">
-                <h3>2017 - 2018</h3>
-                <p>
-                  Started making video games with C# in unity and posting on
-                  youtube 🎬
-                </p>
-              </div>
-              <div class="timeline-part">
-                <h3>2019</h3>
-                <p>Reached 70K subscribers on youtube</p>
-              </div>
-              <div class="timeline-part">
-                <h3>2020</h3>
-                <p>Still Making Video Games</p>
-              </div>
-              <div class="timeline-part">
-                <h3>2021</h3>
-                <p>
-                  Started learning web development and reached 90K subscribers
-                  on youtube
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="skills-container">
-            <h1>My Skills</h1>
-            <div class="skill">
-              Front-end
-              <div class="bar">
-                <div style="width: 85%" class="bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill">
-              Back-end
-              <div class="bar">
-                <div style="width: 60%" class="bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill">
-              HTML
-              <div class="bar">
-                <div style="width: 90%" class="bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill">
-              CSS
-              <div class="bar">
-                <div style="width: 90%" class="bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill">
-              JavaScript
-              <div class="bar">
-                <div style="width: 85%" class="bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill">
-              ReactJS
-              <div class="bar">
-                <div style="width: 65%" class="bar-fill"></div>
-              </div>
-            </div>
-            <div class="skill">
-              NodeJs
-              <div class="bar">
-                <div style="width: 60%" class="bar-fill"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="developed-by">Created By Fatih - 2021</div>
       </div>
     </div>
+    <div id="projects" class="projects-container">
+      <div class="section-header">
+        <span>Projects</span>
+        <span>Some Things I’ve Built</span>
+      </div>
+      <div class="project-boxes">
+        <div class="project-box">
+          <div class="project-img">
+            <img src="./web-images/ecommerce1.png" alt="" />
+          </div>
+          <div class="project-details">
+            <div>
+              <div class="icons">
+                <i class="fal fa-folder"></i>
+                <a
+                  target="_blank"
+                  href="https://github.com/fatihcnn/E-commerce-Website---Full-Project"
+                  ><i class="fal fa-external-link"></i
+                ></a>
+              </div>
+              <h2>MERN Stack E-commerce</h2>
+              <p>
+                A full stack e-commerce website that I made with React and I
+                used Node.js for create back-end.
+              </p>
+            </div>
+            <div class="technologies">
+              <span>MongoDB</span>
+              <span>Express</span>
+              <span>React</span>
+              <span>Node.js</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-box">
+          <div class="project-img">
+            <img src="./web-images/covidtracker.png" alt="" />
+          </div>
+          <div class="project-details">
+            <div>
+              <div class="icons">
+                <i class="fal fa-folder"></i>
+                <a
+                  target="_blank"
+                  href="https://github.com/fatihcnn/covidtracker"
+                  ><i class="fal fa-external-link"></i
+                ></a>
+              </div>
+              <h2>Covid-19 Tracker</h2>
+              <p>Covid-19 Tracker with interactive map, daily data and more.</p>
+            </div>
+            <div class="technologies">
+              <span>API</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-box">
+          <div class="project-img">
+            <img src="./web-images/portfolio1.png" alt="" />
+          </div>
+          <div class="project-details">
+            <div>
+              <div class="icons">
+                <i class="fal fa-folder"></i>
+                <a target="_blank" href="https://github.com/fatihcnn/portfolio"
+                  ><i class="fal fa-external-link"></i
+                ></a>
+              </div>
+              <h2>Personal Portfolio</h2>
+              <p>
+                Personal portfolio website that I made with HTML, CSS,
+                JavaScript.
+              </p>
+            </div>
+            <div class="technologies">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-box">
+          <div class="project-img">
+            <img src="./web-images/personal-portfolio.png" alt="" />
+          </div>
+          <div class="project-details">
+            <div>
+              <div class="icons">
+                <i class="fal fa-folder"></i>
+                <a
+                  target="_blank"
+                  href="https://github.com/fatihcnn/my-personal-portfolio"
+                  ><i class="fal fa-external-link"></i
+                ></a>
+              </div>
+              <h2>My Personal Portfolio</h2>
+              <p>I created this project to use as my personal portfolio.</p>
+            </div>
+            <div class="technologies">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-box">
+          <div class="project-img">
+            <img src="./web-images/mobiledesign1.png" alt="" />
+          </div>
+          <div class="project-details">
+            <div>
+              <div class="icons">
+                <i class="fal fa-folder"></i>
+                <a target="_blank" href="https://github.com/fatihcnn/News-App"
+                  ><i class="fal fa-external-link"></i
+                ></a>
+              </div>
+              <h2>Mobile Design</h2>
+              <p>
+                Mobile design for news app. Made with HTML, CSS, JavaScript.
+              </p>
+            </div>
+            <div class="technologies">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-box">
+          <div class="project-img">
+            <img src="./web-images/starshiptracker1.png" alt="" />
+          </div>
+          <div class="project-details">
+            <div>
+              <div class="icons">
+                <i class="fal fa-folder"></i>
+                <a
+                  target="_blank"
+                  href="https://github.com/fatihcnn/Starship-Tracker"
+                  ><i class="fal fa-external-link"></i
+                ></a>
+              </div>
+              <h2>SpaceX Starship Flight Tracker</h2>
+              <p>
+                Starship tracker that shows you previos and upcoming launchs.
+              </p>
+            </div>
+            <div class="technologies">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="about" class="about-container">
+      <div class="section-header">
+        <span>Who am I?</span>
+      </div>
+      <div class="information">
+        <img src="./me.jpg" alt="" />
+        <div class="info">
+          <div class="personal-info">
+            <h1>I'm Fatih</h1>
+            <p>
+              Hello! My name is Fatih and I create websites. My interest in web
+              development started when I decided to make website for my youtube
+              channel and then I realized I have passion for web development.
+            </p>
+            <br />
+            <p>Here are a few technologies I've been working with recently:</p>
+            <div class="recent-tech">
+              <span>JavaScript (ES6+)</span><span>React</span
+              ><span>Node.js</span><span>MongoDB</span>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="mailto: fatihcandev@gmail.com" target="_blank"
+              ><i class="fal fa-envelope"></i> Email : fatihcandev@gmail.com</a
+            ><br />
+            <a href="https://github.com/fatihcnn" target="_blank"
+              ><i class="fab fa-github"></i> Github</a
+            >
+            <a href="https://twitter.com/fatihcisk" target="_blank"
+              ><i class="fab fa-twitter"></i> Twitter</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="about-container-bottom">
+        <div class="timeline-container">
+          <h1>Timeline</h1>
+          <div class="timeline-parts">
+            <div class="timeline-part">
+              <h3>2017 - 2018</h3>
+              <p>
+                Started making video games with C# in unity and posting on
+                youtube 🎬
+              </p>
+            </div>
+            <div class="timeline-part">
+              <h3>2019</h3>
+              <p>Reached 70K subscribers on youtube</p>
+            </div>
+            <div class="timeline-part">
+              <h3>2020</h3>
+              <p>Still Making Video Games</p>
+            </div>
+            <div class="timeline-part">
+              <h3>2021</h3>
+              <p>
+                Started learning web development and reached 90K subscribers on
+                youtube
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="skills-container">
+          <h1>My Skills</h1>
+          <div class="skill">
+            Front-end
+            <div class="bar">
+              <div style="width: 85%" class="bar-fill"></div>
+            </div>
+          </div>
+          <div class="skill">
+            Back-end
+            <div class="bar">
+              <div style="width: 60%" class="bar-fill"></div>
+            </div>
+          </div>
+          <div class="skill">
+            HTML
+            <div class="bar">
+              <div style="width: 90%" class="bar-fill"></div>
+            </div>
+          </div>
+          <div class="skill">
+            CSS
+            <div class="bar">
+              <div style="width: 90%" class="bar-fill"></div>
+            </div>
+          </div>
+          <div class="skill">
+            JavaScript
+            <div class="bar">
+              <div style="width: 85%" class="bar-fill"></div>
+            </div>
+          </div>
+          <div class="skill">
+            ReactJS
+            <div class="bar">
+              <div style="width: 65%" class="bar-fill"></div>
+            </div>
+          </div>
+          <div class="skill">
+            NodeJs
+            <div class="bar">
+              <div style="width: 60%" class="bar-fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        href="https://twitter.com/fatihcisk"
+        target="_blank"
+        class="developed-by"
+        >Created By Fatih - 2021</a
+      >
+    </div>
+    <script src="./app.js"></script>
   </body>
 </html>
