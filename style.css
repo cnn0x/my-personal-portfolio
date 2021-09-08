@@ -10,11 +10,9 @@
 
 body {
   background-color: #17181a;
-  width: 100%;
+  max-width: 100%;
   height: 100vh;
-  overflow: auto;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -23,8 +21,8 @@ body::-webkit-scrollbar {
 
 .cursor {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   background-color: #f3e9cd;
   border-radius: 50%;
   pointer-events: none;
@@ -83,6 +81,7 @@ body::-webkit-scrollbar {
   width: 60%;
   animation: headercontainer 0.7s;
   position: relative;
+  transition: 0.4s;
 }
 
 @keyframes headercontainer {
@@ -146,6 +145,7 @@ body::-webkit-scrollbar {
 .box {
   background-color: #f3e9cd;
   border-radius: 30% 70% 70% 30% / 48% 30% 70% 52%;
+  box-shadow: -30px 0px 0px 20px #212225;
   width: 500px;
   height: 500px;
   display: flex;
@@ -159,8 +159,12 @@ body::-webkit-scrollbar {
 .box:hover {
   border-radius: 76% 24% 67% 33% / 33% 45% 55% 67%;
 }
-.box:hover img:nth-child(2) {
+.box:hover .me-img {
   border-radius: 76% 24% 67% 33% / 33% 45% 55% 67%;
+}
+
+.fade-out {
+  background-color: #212225;
 }
 
 @keyframes box {
@@ -185,13 +189,13 @@ body::-webkit-scrollbar {
   }
 }
 
-.box img:nth-child(2) {
+.me-img {
   width: 80%;
   animation: boxi 8s infinite;
   animation-delay: 0.7;
   border-radius: 30% 70% 10% 90% / 71% 70% 30% 29%;
   box-shadow: rgba(8, 8, 8, 0.5) 0px 7px 50px 0px;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 .scroll-int {
@@ -275,6 +279,59 @@ body::-webkit-scrollbar {
   position: relative;
 }
 
+.buble-holder {
+  width: 700px;
+  height: 700px;
+  background-color: #212225;
+  border-radius: 76% 24% 67% 33% / 33% 45% 55% 67%;
+  position: absolute;
+  top: 100px;
+  left: -200px;
+  z-index: -10;
+  transition: 1s;
+}
+.buble-holder:hover {
+  border-radius: 30% 70% 10% 90% / 71% 70% 30% 29%;
+}
+.fade-open {
+  background-color: #f3e9cd;
+  border-radius: 30% 70% 10% 90% / 71% 70% 30% 29%;
+}
+
+.bulb {
+  position: absolute;
+  top: 150px;
+  left: -150px;
+  z-index: -5;
+  width: 400px;
+}
+
+.bulb-glass {
+  transition: 0.5s;
+}
+.bulb-glass-active {
+  fill: #d39700 !important;
+  filter: drop-shadow(0px 0px 20px #ffb70062);
+}
+
+.person {
+  position: absolute;
+  top: 100px;
+  right: -100px;
+  z-index: -5;
+  width: 300px;
+  fill: #212225;
+}
+
+.person-head {
+  transition: 0.5s;
+}
+
+.person-head-active {
+  fill: #ffb800 !important;
+  filter: drop-shadow(0px 0px 20px #ffb70062);
+}
+
 .project-boxes {
   display: flex;
   flex-wrap: wrap;
@@ -288,16 +345,22 @@ body::-webkit-scrollbar {
   padding: 20px;
   transition: 0.3s;
   background-color: #212225;
-  box-shadow: #00000081 0px 0px 30px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
   height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  opacity: 0;
+}
+
+.project-box-active {
+  opacity: 1;
 }
 
 .project-box:hover {
   transform: translateY(-10px);
 }
+
 .project-box:hover .technologies span {
   color: #ffb800;
 }
@@ -306,8 +369,7 @@ body::-webkit-scrollbar {
   padding: 20px;
   background-color: #17181a;
   border-radius: 7px;
-  height: 50%;
-  box-shadow: #00000081 0px -20px 20px;
+  height: 48%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -376,6 +438,7 @@ body::-webkit-scrollbar {
   max-width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
+  position: relative;
 }
 
 .information {
@@ -449,10 +512,6 @@ body::-webkit-scrollbar {
   border-radius: 7px;
 }
 
-.skills-container:hover .bar-fill {
-  animation: fill 0.5s ease;
-}
-
 .developed-by {
   color: #f3e9cd;
   opacity: 0.8;
@@ -462,14 +521,8 @@ body::-webkit-scrollbar {
 }
 
 @keyframes fill {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateX(-100px);
-  }
-  100% {
-    transform: translateY(0);
+  from {
+    width: 0;
   }
 }
 
@@ -494,6 +547,11 @@ body::-webkit-scrollbar {
   );
   border-radius: 20px;
   transition: 0.3s;
+  animation: fill 3s ease-in-out forwards;
+  animation-play-state: paused;
+}
+.bar-fill-active {
+  animation-play-state: running !important;
 }
 
 .about-container-bottom {
@@ -550,6 +608,19 @@ body::-webkit-scrollbar {
 }
 
 @media all and (max-width: 768px) {
+  .project-box {
+    opacity: 1;
+  }
+  .bulb {
+    width: 200px;
+    top: 150px;
+    left: -20px;
+  }
+  .person {
+    width: 100px;
+    top: -50px;
+    right: 20px;
+  }
   .projects-container {
     padding-bottom: 0;
   }
